@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70479F8E-5BC0-47D4-9418-922402628292}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DPOWEditor</RootNamespace>
+    <AssemblyName>DPOWEditor</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ciloci.Flee, Version=0.9.26.0, Culture=neutral, PublicKeyToken=c8526a021ef298ed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\development\Flee-0.9.26.0-lib\Flee-0.9.26.0\lib\Ciloci.Flee.dll</HintPath>
+    </Reference>
+    <Reference Include="Mogre, Version=1.7.1.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\MogreSDK\bin\Release\Mogre.dll</HintPath>
+    </Reference>
+    <Reference Include="pestools, Version=1.0.3931.3351, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ClassLibrary1\ClassLibrary1\bin\Release\pestools.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAddAnimationChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddAnimationChild.Designer.cs">
+      <DependentUpon>frmAddAnimationChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInterpolateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInterpolateDialog.Designer.cs">
+      <DependentUpon>frmInterpolateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScaleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScaleDialog.Designer.cs">
+      <DependentUpon>frmScaleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectSubfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectSubfile.Designer.cs">
+      <DependentUpon>frmSelectSubfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTextDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTextDialog.Designer.cs">
+      <DependentUpon>frmTextDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUVMapDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUVMapDialog.Designer.cs">
+      <DependentUpon>frmUVMapDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddAnimationChild.resx">
+      <DependentUpon>frmAddAnimationChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInterpolateDialog.resx">
+      <DependentUpon>frmInterpolateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScaleDialog.resx">
+      <DependentUpon>frmScaleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectSubfile.resx">
+      <DependentUpon>frmSelectSubfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTextDialog.resx">
+      <DependentUpon>frmTextDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUVMapDialog.resx">
+      <DependentUpon>frmUVMapDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DPOWReader\DPOWReader.csproj">
+      <Project>{ECE1340D-90A6-474D-97A7-79E40B134A81}</Project>
+      <Name>DPOWReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TimeLineControl\TimeLineControl.csproj">
+      <Project>{D34ECABE-CF9D-4E35-8EF9-FE3E9CD9F1AB}</Project>
+      <Name>TimeLineControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

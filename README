@@ -1,0 +1,10 @@
+DPOW Studio
+===========
+
+This is a complete editor for manipulating DPOW files (2D graphics' layout on PES 2008+). I was planning to release this tool, sooner than later, but i was too busy to make a complete documentation for such a complex application. You may find some fairly basic informations about it on the 'Docs' folder.
+
+Dependencies: MOrge (Graphics Preview), Ciloci FLEE (Interpolation), PESTools (zlib handling)
+
+All needed DLLs can be found on the References folder.
+
+It might need some tweaking on the project settings in order to compile (like DLL references update).

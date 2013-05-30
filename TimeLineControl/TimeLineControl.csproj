@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D34ECABE-CF9D-4E35-8EF9-FE3E9CD9F1AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TimeLineControl</RootNamespace>
+    <AssemblyName>TimeLineControl</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NamesPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NamesPanel.Designer.cs">
+      <DependentUpon>NamesPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullTimeLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FullTimeLine.Designer.cs">
+      <DependentUpon>FullTimeLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timeline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Timeline.Designer.cs">
+      <DependentUpon>Timeline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DPOWReader\DPOWReader.csproj">
+      <Project>{ECE1340D-90A6-474D-97A7-79E40B134A81}</Project>
+      <Name>DPOWReader</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NamesPanel.resx">
+      <DependentUpon>NamesPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullTimeLine.resx">
+      <DependentUpon>FullTimeLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timeline.resx">
+      <DependentUpon>Timeline.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
